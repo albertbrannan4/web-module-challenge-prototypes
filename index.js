@@ -58,7 +58,9 @@ function Car(model,milesPerGallon) {
 Car.prototype.fill = function(gallons){
   this.tank += gallons;
 }
-
+Car.prototype.drive = function(distance){
+  this.odometer += distance;
+}
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -82,10 +84,11 @@ Baby.prototype.play = function(){
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global Scope: when the 'this' keyword is called from the global scope 'this' points to variables located in the window.
+
+  2. Objects Method: By using the new keyword you are able to create an object of a function.
+  3. call and apply: We use call and apply to set the context of the this object.
+  4. bind: this helps set the context of a callback function.
 */
 
 ///////// END OF CHALLENGE /////////
